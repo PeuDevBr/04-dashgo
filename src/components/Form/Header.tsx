@@ -1,5 +1,5 @@
-import { Flex, Text, Input, Icon } from '@chakra-ui/react'
-import { RiSearchLine } from 'react-icons/ri' // yarn add react-icons
+import { Flex, Text, Input, Icon, HStack, Box, Avatar } from '@chakra-ui/react'
+import { RiNotificationLine, RiSearchLine, RiUserAddLine } from 'react-icons/ri' // yarn add react-icons
 
 export function Header() {
 
@@ -46,6 +46,39 @@ export function Header() {
           _placeholder={{ color: "gray.400"}}
         />
         <Icon as={RiSearchLine} fontSize="20"/>
+      </Flex>
+
+      <Flex
+        align="center"
+        ml="auto" // margin left - joga o conteúdo para a direita        
+      >
+        <HStack  
+          spacing="8"
+          mx="8"
+          pr="8"
+          py="1"
+          color="gray.300"
+          borderRightWidth={1}
+          borderColor="gray.700"
+        >
+          <Icon as={RiNotificationLine} fontSize="20" />
+          <Icon as={RiUserAddLine} fontSize="20" />
+        </HStack>
+
+        <Flex align="center">
+          <Box mr="4" textAlign="right"> {/* div sem estilização */}
+            <Text>Flávio Renato</Text>
+            <Text color="gray.300" fontSize="small">
+              renatoarapiraca.82@gmail.com
+            </Text>
+          </Box>
+
+          <Avatar 
+            size="md" 
+            name="Flávio Renato" 
+            src="https://xesque.rocketseat.dev/users/avatar/profile-52fbe155-13ec-494a-a55e-c79b4e5520ab-1614627655758.jpg"
+          />
+        </Flex>
       </Flex>
     </Flex>
   )
