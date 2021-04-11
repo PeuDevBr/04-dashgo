@@ -1,7 +1,7 @@
 import { Box, Divider, Flex, Heading, VStack, SimpleGrid, HStack, Button } from "@chakra-ui/react";
-import { Header } from "../../components/Form/Header";
+import { Header } from "../../components/Header";
 import { Input } from "../../components/Form/Input";
-import { Sidebar } from "../../components/Form/Sidebar";
+import { Sidebar } from "../../components/SideBar";
 
 export default function CreateUser() {
   return (
